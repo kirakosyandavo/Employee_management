@@ -1,0 +1,45 @@
+# Employee Management System
+
+## Project Overview
+
+The **Employee Management System** is a C++ application designed to manage employees in a company. It provides functionalities for adding employees, calculating salaries, promoting employees, updating employee statuses, and more. The system uses Object-Oriented Programming (OOP) principles such as inheritance, polymorphism, and encapsulation. It also uses enums for roles, employment types, and employee statuses.
+
+## Features
+
+- **Add Employee**: Add employees with a specific role (e.g., Intern, Junior) and employment type (e.g., Full-Time, Part-Time).
+- **Calculate Salary**: Compute salaries based on employment type, role, and rate using a virtual function.
+- **Display Employee Details**: Show employee details such as ID, name, salary, role, employment type, and status.
+- **List All Employees**: Display a list of all employees with their calculated salaries.
+- **Promote Employee**: Promote employees by updating their role (e.g., Intern to Junior) using the `++` operator on the Role enum and adjusting their salary rate.
+- **Update Employee Status**: Modify an employee’s status (e.g., Active, On Leave, Inactive, Retired).
+- **Search Employees**: Search for employees by name or employee ID.
+
+## Project Structure
+
+```text
+EmployeeManagementSystem/
+│
+├── include/                    # Directory for header files
+│   ├── Employee.h              # Base class declaration with virtual functions
+│   ├── FullTimeEmployee.h      # FullTimeEmployee class declaration
+│   ├── PartTimeEmployee.h      # PartTimeEmployee class declaration
+│   ├── EmployeeStatus.h        # Enums for managing employee roles, statuses
+│   └── Utility.h               # Helper functions declarations (input validation, search)
+│
+├── src/                        # Directory for source files
+│   ├── main.cpp                # Entry point for user interaction and system management
+│   ├── Employee.cpp            # Base class implementation
+│   ├── FullTimeEmployee.cpp    # FullTimeEmployee class implementation
+│   ├── PartTimeEmployee.cpp    # PartTimeEmployee class implementation
+│   ├── EmployeeStatus.cpp      # Implementation for enums and helper functions
+│   └── Utility.cpp             # Implementation of helper functions
+│
+├── test/                       # Directory for test files
+│   ├── TestEmployee.cpp        # Tests for Employee class functionality
+│   ├── TestFullTimeEmployee.cpp # Tests for FullTimeEmployee class functionality
+│   ├── TestPartTimeEmployee.cpp # Tests for PartTimeEmployee class functionality
+│   ├── TestEmployeeStatus.cpp  # Tests for EmployeeStatus functionality
+│   └── TestUtility.cpp         # Tests for Utility functions
+│
+├── Makefile                    # Makefile for building the project and running tests
+└── README.md                   # Project documentation
